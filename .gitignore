@@ -1,0 +1,5 @@
+/src/
+/pkg/
+/*.pacman
+/*.pkg.tar.*
+/*.log
