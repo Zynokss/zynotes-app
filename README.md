@@ -65,7 +65,27 @@ makepkg -si
 
 The recipe downloads the published binary from Cloudflare R2, verifies its SHA-512 checksum, and repackages it for pacman. It does not compile Zynotes from source. Launch **Zynotes** from your application menu or run `zynotes`.
 
-If you already installed the direct `zynotes` pacman package, the new `zynotes-bin` package conflicts with it; review pacman's replacement prompt. To remove this package:
+If you already installed the direct `zynotes` pacman package, the new `zynotes-bin` package conflicts with it; accept pacman's prompt to remove the old package.
+
+#### Migrating from the old installer
+
+Older direct packages created `/usr/bin/zynotes` in an installation script without registering it with pacman. If installation fails with `/usr/bin/zynotes exists in filesystem`, inspect it:
+
+```sh
+pacman -Qo /usr/bin/zynotes
+ls -l /usr/bin/zynotes
+```
+
+If pacman reports **No package owns /usr/bin/zynotes** and it is a symbolic link to **/opt/Zynotes/zynotes**, remove that old launcher and retry:
+
+```sh
+sudo rm /usr/bin/zynotes
+makepkg -si
+```
+
+This removes only the launcher link. The new package recreates it as a pacman-owned file; your notebooks are not removed. If the file is owned by another package or points somewhere else, resolve that separately before proceeding.
+
+To remove this package:
 
 ```sh
 sudo pacman -R zynotes-bin
