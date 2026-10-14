@@ -12,11 +12,11 @@ Zynotes is a local-first notebook for notes, daily writing, fragments, folders, 
 
 | Platform | Download | Version |
 | --- | --- | --- |
-| Windows | [Windows installer](https://updates.zynotes.zynoks.com/Zynotes-Setup-0.1.1.exe) | 0.1.1 |
+| Windows | [Windows installer](https://updates.zynotes.zynoks.com/Zynotes-Setup-0.1.2.exe) | 0.1.2 |
 | Android | [Android APK](https://updates.zynotes.zynoks.com/Zynotes-1.0.1.apk) | 1.0.1 |
-| Linux x86_64 | [AppImage](https://updates.zynotes.zynoks.com/Zynotes-0.1.1.AppImage) | 0.1.1 |
-| Debian / Ubuntu x86_64 | [Debian package](https://updates.zynotes.zynoks.com/zynotes_0.1.1_amd64.deb) | 0.1.1 |
-| Arch Linux x86_64 | [Pacman package](https://updates.zynotes.zynoks.com/zynotes-0.1.1.pacman) or the recipe below | 0.1.1 |
+| Linux x86_64 | [AppImage](https://updates.zynotes.zynoks.com/Zynotes-0.1.2.AppImage) | 0.1.2 |
+| Debian / Ubuntu x86_64 | [Debian package](https://updates.zynotes.zynoks.com/zynotes_0.1.2_amd64.deb) | 0.1.2 |
+| Arch Linux x86_64 | [Pacman package](https://updates.zynotes.zynoks.com/zynotes-0.1.2.pacman) or the recipe below | 0.1.2 |
 
 For the current downloads, see the [official website](https://zynotes.zynoks.com). Native macOS and iOS downloads are not available yet.
 
@@ -35,8 +35,8 @@ Download the APK on your phone, open it, and allow installation from that browse
 Download the AppImage, then run these commands in the folder containing it:
 
 ```sh
-chmod +x Zynotes-0.1.1.AppImage
-./Zynotes-0.1.1.AppImage
+chmod +x Zynotes-0.1.2.AppImage
+./Zynotes-0.1.2.AppImage
 ```
 
 ### Debian / Ubuntu
@@ -44,8 +44,19 @@ chmod +x Zynotes-0.1.1.AppImage
 In the folder containing the downloaded package:
 
 ```sh
-sudo apt install ./zynotes_0.1.1_amd64.deb
+sudo apt install ./zynotes_0.1.2_amd64.deb
 ```
+
+### Arch Linux: download and install directly
+
+Run both commands in the same folder:
+
+```sh
+curl -fL https://updates.zynotes.zynoks.com/zynotes-0.1.2.pacman -o zynotes-0.1.2.pacman
+sudo pacman -U ./zynotes-0.1.2.pacman
+```
+
+`pacman -U` installs a local file; it does not download the package. If you downloaded it through your browser instead, run the install command from the folder where it was saved, or pass its full path. A “could not find or read package” error means the package is missing or unreadable at that path.
 
 ### Arch Linux: install using this repository
 
@@ -98,14 +109,14 @@ git pull --ff-only
 makepkg -si
 ```
 
-This repository is not an AUR listing. For the direct pacman download instead, use `sudo pacman -U ./zynotes-0.1.1.pacman`.
+This repository is not an AUR listing. For the direct pacman download instead, follow the download-and-install commands above.
 
 ## What you can do
 
 - Write and read notes with Markdown and a visual editor.
 - Organize writing with folders, tags, and templates.
 - Connect ideas with links, backlinks, Map, and Scatter.
-- Keep multiple local notebooks on desktop and in the web app.
+- Keep multiple local notebooks on desktop and in the web app. Delete a notebook from the chooser after opening another notebook; confirmation is required.
 - Export a complete ZIP backup and preview it before restoring.
 - Follow the backup guides and optional animated tutorial inside the app.
 

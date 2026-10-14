@@ -1,6 +1,6 @@
 pkgbase = zynotes-bin
 	pkgdesc = Local-first personal notebooks, writing, and connected ideas
-	pkgver = 0.1.1
+	pkgver = 0.1.2
 	pkgrel = 1
 	url = https://zynotes.zynoks.com
 	arch = x86_64
@@ -30,12 +30,12 @@ pkgbase = zynotes-bin
 	depends = pango
 	depends = systemd-libs
 	depends = xdg-utils
-	provides = zynotes=0.1.1
+	provides = zynotes=0.1.2
 	conflicts = zynotes
-	noextract = zynotes-0.1.1.pacman
+	noextract = zynotes-0.1.2.pacman
 	options = !strip
 	options = !debug
-	source = zynotes-0.1.1.pacman::https://updates.zynotes.zynoks.com/zynotes-0.1.1.pacman
-	sha512sums = 078d9c0181af06859b4e8cb2cc6189e260b1cdccb44ddcdca612198422b3a0b96df4593496b047fbf309a7683fa3095b129986409c779f6891c200897f06452c
+	source = zynotes-0.1.2.pacman::https://updates.zynotes.zynoks.com/zynotes-0.1.2.pacman
+	sha512sums = 95e147d50af8868d77abbaa6e684241bebe4763367c25b44e987d4d62c52cebf1aa20d7abe0ac8b519694f5475d0cfa756ff32900e2356bcb1770288858338e7
 
 pkgname = zynotes-bin

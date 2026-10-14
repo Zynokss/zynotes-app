@@ -1,7 +1,7 @@
 # Maintainer: Zynoks
 # Packages the official prebuilt Zynotes release; does not build application source.
 pkgname=zynotes-bin
-pkgver=0.1.1
+pkgver=0.1.2
 pkgrel=1
 pkgdesc='Local-first personal notebooks, writing, and connected ideas'
 arch=('x86_64')
@@ -19,7 +19,7 @@ conflicts=('zynotes')
 options=('!strip' '!debug')
 source=("zynotes-${pkgver}.pacman::https://updates.zynotes.zynoks.com/zynotes-${pkgver}.pacman")
 noextract=("zynotes-${pkgver}.pacman")
-sha512sums=('078d9c0181af06859b4e8cb2cc6189e260b1cdccb44ddcdca612198422b3a0b96df4593496b047fbf309a7683fa3095b129986409c779f6891c200897f06452c')
+sha512sums=('95e147d50af8868d77abbaa6e684241bebe4763367c25b44e987d4d62c52cebf1aa20d7abe0ac8b519694f5475d0cfa756ff32900e2356bcb1770288858338e7')
 
 prepare() {
   mkdir -p "${srcdir}/upstream"
